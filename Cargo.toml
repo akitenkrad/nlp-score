@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+
+members = [ "mecab",
+    "metrics",
+    "tokenizer",
+]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["akitenkrad"]
+repository = "https://github.com/akitenkrad/rs-nlp-tools.git"
+license = "MIT"
+
+[workspace.dependencies]
+mecab = { path = "mecab"}
+metrics = { path = "metrics" }
+tokenizer = { path = "tokenizer" }
+anyhow = ">=1.0.93"
+indicatif = ">=0.17.8"
+reqwest = ">=0.12.9"
+tokio = ">=1.41.1"

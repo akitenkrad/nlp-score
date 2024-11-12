@@ -19,6 +19,7 @@ pub struct MeCabToken {
     pub pos1: String,
     pub pos2: String,
     pub feature: String,
+    pub stem: String,
 }
 
 static MECAB_TOKENIZER: Lazy<Tokenizer> = Lazy::new(|| get_tokenizer());
@@ -121,6 +122,7 @@ pub fn mecab_tokenize(text: &str) -> Vec<MeCabToken> {
             pos1: features.get(0).unwrap_or(&"").to_string(),
             pos2: features.get(1).unwrap_or(&"").to_string(),
             feature: features.get(2).unwrap_or(&"").to_string(),
+            stem: features.get(7).unwrap_or(&"").to_string(),
         });
     }
     return tokens;

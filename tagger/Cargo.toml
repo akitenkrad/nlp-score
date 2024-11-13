@@ -1,12 +1,11 @@
 [package]
-name = "tokenizer"
+name = "tagger"
 edition = "2021"
 version.workspace = true
 authors.workspace = true
 repository.workspace = true
 license.workspace = true
 
-
 [dependencies]
 anyhow = { workspace = true }
-mecab = { workspace = true }
+libm = { workspace = true }
